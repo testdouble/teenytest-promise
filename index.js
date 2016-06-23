@@ -1,5 +1,3 @@
-var callbackify = require('callbackify')
-
 module.exports = {
   name: 'teenytest-promise',
   translators: {
