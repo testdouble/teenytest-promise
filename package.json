@@ -22,6 +22,6 @@
   "devDependencies": {
     "bluebird": "^3.4.0",
     "lodash": "^4.13.1",
-    "teenytest": "^4.1.0"
+    "teenytest": "^5.0.0"
   }
 }
