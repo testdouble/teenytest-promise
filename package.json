@@ -1,0 +1,27 @@
+{
+  "name": "teenytest-promise",
+  "version": "1.0.0",
+  "description": "Enables teenytests to return promises instead of code to the callback API",
+  "main": "index.js",
+  "scripts": {
+    "test": "teenytest index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/teenytest-promise.git"
+  },
+  "author": "Justin Searls <searls@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/testdouble/teenytest-promise/issues"
+  },
+  "homepage": "https://github.com/testdouble/teenytest-promise#readme",
+  "dependencies": {
+    "callbackify": "^1.1.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.0",
+    "lodash": "^4.13.1",
+    "teenytest": "^4.1.0"
+  }
+}
