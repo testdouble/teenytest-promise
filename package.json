@@ -4,7 +4,7 @@
   "description": "Enables teenytests to return promises instead of code to the callback API",
   "main": "index.js",
   "scripts": {
-    "test": "teenytest index.test.js"
+    "test": "teenytest index.test.js && standard"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,10 @@
     "url": "https://github.com/testdouble/teenytest-promise/issues"
   },
   "homepage": "https://github.com/testdouble/teenytest-promise#readme",
-  "dependencies": {},
   "devDependencies": {
     "bluebird": "^3.4.0",
     "lodash": "^4.13.1",
+    "standard": "^7.1.2",
     "teenytest": "^5.0.0"
   }
 }

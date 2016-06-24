@@ -2,16 +2,15 @@ var spawn = require('child_process').spawn
 var assert = require('assert')
 var _ = require('lodash')
 
-module.exports = function thePromisePluginWorks(done) {
+module.exports = function thePromisePluginWorks (done) {
   run('./node_modules/.bin/teenytest',
       ['--plugin', 'index.js',
        '--timeout', '250',
        'example.test.js'],
-      function (er, code, log) {
+  function (er, code, log) {
     try {
-      log = log.split('\n')
       assert.strictEqual(code, 1)
-      _.each([
+      assertLines(log, [
         'TAP version 13',
         '1..3',
         'not ok 1 - "failing" - test #1 in `example.test.js`',
@@ -29,16 +28,7 @@ module.exports = function thePromisePluginWorks(done) {
         /at/,
         /at/,
         '  ...'
-      ], function (line, i) {
-        if (_.isString(line)) {
-          assert.equal(log[i], line)
-        } else if (_.isRegExp(line)) {
-          assert(log[i].match(line), 'expected \n\n"' + log[i] +
-                                     '"\n\n to match \n\n' + line + '\n')
-        } else {
-          throw 'expected line was not a string or a regex'
-        }
-      })
+      ])
     } catch (e) {
       console.error('Test failed. Actual output:')
       console.error('---')
@@ -65,3 +55,18 @@ function run (cmd, args, cb) {
     cb(null, code, log)
   })
 }
+
+function assertLines (actual, lines) {
+  var actualLines = actual.split('\n')
+  _.each(lines, function (line, i) {
+    if (_.isString(line)) {
+      assert.equal(actualLines[i], line)
+    } else if (_.isRegExp(line)) {
+      assert(actualLines[i].match(line), 'expected \n\n"' + actualLines[i] +
+                                 '"\n\n to match \n\n' + line + '\n')
+    } else {
+      throw new Error('expected line was not a string or a regex')
+    }
+  })
+}
+
