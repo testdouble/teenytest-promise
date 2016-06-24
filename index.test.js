@@ -17,16 +17,12 @@ module.exports = function thePromisePluginWorks (done) {
         '  ---',
         '  message: 42 == 41',
         '  stacktrace: AssertionError: 42 == 41',
-        /at/,
-        /at/,
         '  ...',
         'ok 2 - "passing" - test #2 in `example.test.js`',
         'not ok 3 - "timedOut" - test #3 in `example.test.js`',
         '  ---',
         '  message: Test timed out! (timeout: 250ms)',
         '  stacktrace: Error: Test timed out! (timeout: 250ms)',
-        /at/,
-        /at/,
         '  ...'
       ])
     } catch (e) {
@@ -57,7 +53,9 @@ function run (cmd, args, cb) {
 }
 
 function assertLines (actual, lines) {
-  var actualLines = actual.split('\n')
+  var actualLines = _.reject(actual.split('\n'), function (line) {
+    return _.startsWith(line, '    at')
+  })
   _.each(lines, function (line, i) {
     if (_.isString(line)) {
       assert.equal(actualLines[i], line)
