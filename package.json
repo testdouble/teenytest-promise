@@ -16,6 +16,9 @@
     "url": "https://github.com/testdouble/teenytest-promise/issues"
   },
   "homepage": "https://github.com/testdouble/teenytest-promise#readme",
+  "peerDependencies": {    
+    "teenytest": "^5.0.0"
+  },
   "devDependencies": {
     "bluebird": "^3.4.0",
     "lodash": "^4.13.1",
