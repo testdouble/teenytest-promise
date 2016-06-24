@@ -27,4 +27,4 @@ $ teenytest --plugin teenytest-promise "**/*-test.js"
 ```
 
 Which should work fine when run in any directory where
-`require('teenytest-promise') will resolve without error.
+`require('teenytest-promise')` will resolve without error.
