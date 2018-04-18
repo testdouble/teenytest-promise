@@ -16,7 +16,7 @@
     "url": "https://github.com/testdouble/teenytest-promise/issues"
   },
   "homepage": "https://github.com/testdouble/teenytest-promise#readme",
-  "peerDependencies": {    
+  "peerDependencies": {
     "teenytest": "^5.0.0"
   },
   "devDependencies": {

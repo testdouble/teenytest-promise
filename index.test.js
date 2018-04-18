@@ -16,7 +16,7 @@ module.exports = function thePromisePluginWorks (done) {
         'not ok 1 - "failing" - test #1 in `example.test.js`',
         '  ---',
         '  message: 42 == 41',
-        '  stacktrace: AssertionError: 42 == 41',
+        /stacktrace: AssertionError( \[ERR_ASSERTION\])?: 42 == 41/,
         '  ...',
         'ok 2 - "passing" - test #2 in `example.test.js`',
         'not ok 3 - "timedOut" - test #3 in `example.test.js`',
