@@ -7,7 +7,7 @@ rejected before continuing, reporting the success or failure to teenytest itself
 ## Setup
 
 ```
-$ npm i -S teenytest-promise
+$ npm i -D teenytest-promise
 ```
 
 Then add this to your package.json:
