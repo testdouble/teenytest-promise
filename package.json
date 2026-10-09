@@ -1,6 +1,6 @@
 {
   "name": "teenytest-promise",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Enables teenytests to return promises instead of code to the callback API",
   "main": "index.js",
   "scripts": {
