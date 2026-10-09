@@ -16,5 +16,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+      # Node 14 bundles npm 6, which can't read lockfile v3
+      - if: matrix.node-version == '14.x'
+        run: npm install --global npm@8
       - run: npm ci
       - run: npm test
