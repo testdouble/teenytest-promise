@@ -1,5 +1,5 @@
-var bluebird = require('bluebird')
-var assert = require('assert')
+const bluebird = require('bluebird')
+const assert = require('assert')
 
 module.exports = {
   failing: function () {
