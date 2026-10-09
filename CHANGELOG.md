@@ -9,6 +9,8 @@ Node.js versions it supports.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-10-09
+
 ### Added
 
 - Declared `teenytest@^6.0.0` as a peer dependency.
@@ -26,5 +28,6 @@ Node.js versions it supports.
 - teenytest plugin that lets tests and test hooks return a promise. teenytest
   waits for the promise to settle and reports a rejection as a failure.
 
-[Unreleased]: https://github.com/testdouble/teenytest-promise/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/testdouble/teenytest-promise/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/testdouble/teenytest-promise/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/testdouble/teenytest-promise/releases/tag/v1.0.0
